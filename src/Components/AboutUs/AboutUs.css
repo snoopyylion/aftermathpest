@@ -1,0 +1,128 @@
+/* About Us Section */
+.about-us {
+    padding: 80px 10%;
+    background: #f9f9f9;
+  }
+  
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+  }
+  
+  /* Left Side Image */
+  .about-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 12px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Right Side Content */
+  .about-content {
+    max-width: 550px;
+  }
+  
+  .about-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase; /* Ensuring strong emphasis */
+  }
+  
+  .about-title span {
+    color: #4CAF50; /* Green Accent */
+  }
+  
+  .about-description {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #555;
+    font-family: 'Montserrat Alternates', sans-serif; /* More modern readable font */
+  }
+  
+  /* Benefits List */
+  .about-benefits {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .about-benefits li {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  /* Trust Badges */
+  .trust-badges {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+  }
+  
+  /* Badge Styling */
+  .badge {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    cursor: pointer;
+  }
+  
+  /* Icon Styling */
+  .icon {
+    font-size: 24px;
+    color: #4CAF50;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Text Styling */
+  .badge span {
+    font-size: 1rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  /* Hover Effect */
+  .badge:hover {
+    transform: scale(1.05); /* Slight zoom */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15); /* Glow effect */
+    background: #f0fdf4; /* Light green shade */
+  }
+  
+  /* Bounce Icon on Hover */
+  .badge:hover .icon {
+    transform: translateY(-3px); /* Moves the icon up slightly */
+    color: #2E7D32; /* Darker green for contrast */
+  }
+  
+  /* Text Color Change on Hover */
+  .badge:hover span {
+    color: #2E7D32; /* Darker green */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .trust-badges {
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .badge {
+      width: 80%;
+      justify-content: center;
+    }
+  }

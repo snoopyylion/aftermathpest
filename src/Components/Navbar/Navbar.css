@@ -1,0 +1,309 @@
+/* Navbar Container */
+.navbar {
+    background-color: #fff;
+    color: #333333;
+    padding: 15px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+  }
+  .navbar-visible {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.navbar-hidden {
+    transform: translateY(-100%);
+    opacity: 0;
+}
+  
+  /* Main Container for Logo & Navigation */
+  .main-container {
+    display: flex; 
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  /* Logo Styling */
+  .logo img {
+    width: 120px;
+    height: auto;
+  }
+  
+  /* Navigation Items */
+  .nav-items ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+  }
+  
+  /* Navigation Links */
+  .nav-item {
+    position: relative;
+  }
+  
+  .nav-item a {
+    text-decoration: none;
+    color: #333333;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    font-family: "Poppins", serif;
+  }
+  
+  .nav-item a:hover {
+    color: #2E7D32;
+  }
+  
+  /* Active NavLink */
+  .nav-item .active {
+    color: #2E7D32;
+    position: relative;
+  }
+  /* CTA Button */
+  .cta-button {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: linear-gradient(135deg, #4CAF50, #1B5E20); /* Green Gradient */
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    position: relative;
+    overflow: hidden;
+    border: 0.5px solid #333333;
+}
+
+/* Icon Wrapper */
+.icon-wrapper {
+    font-size: 26px;
+    color: #FFA500; /* Bright Yellow */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Divider */
+.divider {
+    width: 2px;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* CTA Text */
+.cta-text {
+    display: flex;
+    flex-direction: column;
+    color: #fff; 
+    font-family: "Poppins", serif;
+}
+
+/* Heading */
+.cta-heading {
+    font-size: 10px;
+    font-weight: 600;
+}
+
+/* Subtext */
+.cta-subtext {
+    font-size: 12px;
+    font-weight: bold;
+    color: #FFA500; /* Bright Yellow */
+    text-transform: uppercase;
+}
+
+/* Hover Effects */
+.cta-button:hover {
+    background: linear-gradient(135deg, #43A047, #2E7D32); /* Slightly lighter green */
+    transform: scale(1.05);
+    box-shadow: 0px 1px 15px rgba(76, 175, 80, 0.5); /* Green glow */
+}
+
+/* Click Effect */
+.cta-button:active {
+    transform: scale(0.95);
+    box-shadow: 0px 2px 6px rgba(76, 175, 80, 0.4);
+}
+
+.cta-button::before {
+    content: "";
+    position: absolute;
+    top: 90%;
+    right: -120%;
+    width: 150%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: rotate(30deg);
+    transition: all 0.5s ease-in-out;
+}
+
+  
+  /* Icon Under Active NavLink */
+  .nav-item .active + .icon {
+    display: flex;
+    justify-content: center;
+    color: #2E7D32;
+    font-size: 22px;
+  }
+  
+  /* Mobile Menu Icon */
+  .menu-icon {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+  }
+  
+  /* Sidebar Navigation */
+  .sidebar {
+    display: none;
+  }
+  
+  .sidebar.visible {
+    right: 0;
+  }
+  
+  .sidebar-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  
+  
+  
+  /* Close Button */
+  .back-button {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
+  .cta-buttons{
+    display: none;
+  }
+
+  
+  /* Responsive Design */
+  @media screen and (max-width: 1024px) {
+    .navbar {
+        padding: 10px 60px;
+      }
+      
+    .nav-item a {
+        font-size: 14px;
+        font-weight: 400;
+      }
+  
+    .cta-button {
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+}
+  @media screen and (max-width: 768px) {
+    .nav-items {
+      display: none;
+    }
+    .nav-itemss{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        font-family: "Poppins", serif;
+    }
+    .cta-button{
+        padding: 7px 12px;
+        font-size: 10px;
+    }
+    .cta-buttons{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: linear-gradient(135deg, #4CAF50, #1B5E20); /* Green Gradient */
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    position: relative;
+    overflow: hidden;
+    border: 0.5px solid #333333;
+    }
+    .sidebar{
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100vh;
+    background: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    z-index: 1000;
+    transition: right 0.3s ease-in-out;
+    border-left: 1px solid #83838333;
+    }
+    .menu-icon {
+      display: block;
+      color: #333333;
+      font-weight: 100;
+      font-size: 20px;
+    }
+    .nav-link:hover {
+        color: #4CAF50;
+      }
+    .back-button{
+        color: #fff;
+        font-size: 25px;
+    }
+    .back-button:hover{
+        color: #4CAF50;
+    }
+  }
+
+@media screen and (max-width: 600px) {
+    .navbar {
+        padding: 12px 15px;
+    }
+
+    .logo img {
+        width: 100px;
+    }
+
+    .cta-button {
+        padding: 7px 12px;
+        font-size: 10px;
+        /* margin-top: 100%; */
+    }
+}
+@media screen and (max-width: 380px) {
+    .navbar {
+        padding: 12px 10px;
+    }
+
+    .logo img {
+        width: 100px;
+    }
+
+    .cta-button {
+        padding: 8px 15px;
+        gap: 8px;
+    }
+}

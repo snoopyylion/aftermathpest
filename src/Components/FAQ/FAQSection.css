@@ -1,0 +1,240 @@
+/* FAQ Section Styling */
+.faq-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 60px 20px;
+    font-family: "Poppins", sans-serif;
+    gap: 40px;
+}
+
+/* FAQ Container */
+.faq-container {
+    width: 100%;
+    max-width: 800px;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* FAQ Title */
+.faq-title {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #1B5E20;
+    text-transform: uppercase;
+    font-family: "Montserrat", serif;
+}
+
+/* FAQ List */
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* FAQ Item */
+.faq-item {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    border-left: 5px solid transparent;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.faq-item.active {
+    border-left: 5px solid #1B5E20;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* FAQ Question */
+.faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 16px 20px;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #333;
+    transition: all 0.3s ease-in-out;
+    font-family: "Open Sans", serif;
+}
+
+.faq-question:hover {
+    background: rgba(27, 94, 32, 0.1);
+    color: #1B5E20;
+}
+
+/* FAQ Answer */
+.faq-answer {
+    background: #f9f9f9;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
+    padding: 0 20px;
+    max-height: 0;
+    opacity: 0;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 150px;
+    padding: 15px 20px;
+    opacity: 1;
+}
+
+.faq-answer p {
+    margin: 0;
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    font-family: "Open Sans", serif;
+}
+
+/* Icon Styling */
+.icon {
+    transition: transform 0.3s ease-in-out;
+    font-size: 18px;
+    color: #1B5E20;
+}
+
+.faq-item.active .icon {
+    transform: rotate(180deg);
+}
+
+/* Blog Section */
+.blog-section {
+    width: 100%;
+    max-width: 600px;
+    background: linear-gradient(135deg, #1B5E20, #2E7D32);
+    color: white;
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Blog Title */
+.blog-section h3 {
+    font-size: 26px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-family: "Montserrat", serif;
+}
+
+/* Blog Description */
+.blog-section p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    font-family: "Open Sans", serif;
+}
+
+/* Subscribe Form */
+.subscribe-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    max-width: 350px;
+    margin: auto;
+}
+
+/* Email Input */
+.subscribe-form input {
+    width: 100%;
+    padding: 14px;
+    border-radius: 8px;
+    text-align: center;
+    border: none;
+    font-size: 16px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    transition: all 0.3s ease-in-out;
+    font-family: "Open Sans", serif;
+}
+
+.subscribe-form input::placeholder {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.subscribe-form input:focus {
+    background: rgba(255, 255, 255, 0.3);
+    border: 1px solid white;
+}
+
+/* Subscribe Button */
+.subscribe-form button {
+    background: white;
+    color: #1B5E20;
+    font-family: "Montserrat", serif;
+    border: none;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s, transform 0.2s;
+}
+
+.subscribe-form button:hover {
+    background: #fff;
+    color: #2E7D32;
+    transform: scale(1.05);
+}
+
+/* Subscription Message */
+.subscribe-message {
+    margin-top: 12px;
+    font-size: 14px;
+    font-weight: bold;
+    opacity: 0.9;
+    font-family: "Open Sans", serif;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .faq-container {
+        max-width: 90%;
+    }
+    .blog-section {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .faq-section{
+        display: flex;
+        flex-direction: column;
+    }
+    .faq-container {
+        padding: 30px;
+    }
+
+    .blog-section {
+        padding: 30px;
+    }
+}
+
+/* Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
