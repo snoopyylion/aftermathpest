@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;600&display=swap');
 
 .footer {
-    background-color: #0D1B2A; /* Dark Blue for a premium look */
+    background-color: #0D1B2A;
     color: white;
     padding: 50px 20px;
     text-align: center;
@@ -19,6 +19,14 @@
 .footer-section {
     flex: 1;
     min-width: 250px;
+    text-align: left;
+}
+
+/* Fix contact-info layout */
+.footer-section.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .footer-title {
@@ -27,7 +35,7 @@
     font-weight: 700;
     margin-bottom: 15px;
     text-transform: uppercase;
-    color: #4CAF50; /* Nice accent color */
+    color: #4CAF50;
 }
 
 .footer-text {
@@ -36,6 +44,7 @@
     line-height: 1.6;
 }
 
+/* Quick Links */
 .footer-links {
     list-style: none;
     padding: 0;
@@ -56,6 +65,22 @@
     color: #4CAF50;
 }
 
+/* Contact Info Links */
+.footer-section a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-section a:hover {
+    color: #4CAF50;
+}
+
+/* Social Icons */
 .social-icons {
     display: flex;
     justify-content: center;
@@ -74,6 +99,7 @@
     color: #4CAF50;
 }
 
+/* Newsletter */
 .newsletter {
     display: flex;
     flex-direction: column;
@@ -93,7 +119,7 @@
 }
 
 .newsletter button {
-    background: linear-gradient(135deg, #4CAF50, #1B5E20); /* Green Gradient */
+    background: linear-gradient(135deg, #4CAF50, #1B5E20);
     color: white;
     border: none;
     margin-top: 10px;
@@ -121,7 +147,15 @@
         text-align: center;
     }
 
+    .footer-section {
+        text-align: center;
+    }
+
     .social-icons {
+        justify-content: center;
+    }
+
+    .footer-section a {
         justify-content: center;
     }
 }

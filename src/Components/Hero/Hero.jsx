@@ -51,7 +51,7 @@ const Hero = () => {
             transition={{ duration: 0.3 }}
             onClick={(e) => e.stopPropagation()}
           >
-            <h2>Property Rental Prices</h2>
+            <h2>Our Prices</h2>
             <ul>
               <li>2. Duplex Apartment (4 bedroom with BQ) - N85,000</li>
               <li>3. 3 Bedroom Flat with BQ - N75,000</li>
