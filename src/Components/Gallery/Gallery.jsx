@@ -4,11 +4,11 @@ import { FaChevronLeft, FaChevronRight, FaTimes } from "react-icons/fa";
 import { assets } from "../../assets/assets";
 
 const media = [
-  assets.work1, assets.work2, assets.work3, assets.work4, assets.work5,
-  assets.work6, assets.work7, assets.work8, assets.work9, assets.work10,
+  assets.work1, assets.work2, assets.work3, assets.work4, 
+  assets.work6, assets.work7,  assets.work10,
   assets.work11, assets.work12, assets.work13, assets.work14, assets.work15,
   assets.work16, assets.work17, assets.work18, assets.work19, assets.work20,
-  assets.work21, assets.work22, assets.work23, assets.work24
+  assets.work21,  assets.work23, assets.work24
 ];
 
 const Gallery = () => {
