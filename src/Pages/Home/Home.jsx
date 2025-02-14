@@ -5,6 +5,7 @@ import OurServices from '../../Components/OurServices/OurServices'
 import Testimonials from '../../Components/Testimonials/Testimonials'
 import CTASection from '../../Components/CTASection/CTASection'
 import FAQSection from '../../Components/FAQ/FAQSection'
+import Gallery from '../../Components/Gallery/Gallery'
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
         <AboutUs/>
         <OurServices/>
         <Testimonials/>
+        <Gallery/>
         <CTASection/>
         <FAQSection/>
     </div>

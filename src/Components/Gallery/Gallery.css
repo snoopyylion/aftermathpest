@@ -1,0 +1,224 @@
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Poppins:wght@400;600&family=Roboto:wght@400;600&family=Open+Sans:wght@400;600&family=Lato:wght@400;600&family=Oswald:wght@600&display=swap');
+
+/* General Gallery Styling */
+.gallery {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #f5f5f5;
+}
+
+/* Headings */
+.gallery-title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 900;
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    
+}
+.gallery-title span{
+    color: #1B5E20; /* Green Accent */
+}
+/* Subheadings */
+.gallery-description {
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif; /* Fallback to Roboto */
+    font-weight: 400;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* Responsive Grid Layout */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery-item {
+    cursor: pointer;
+    position: relative;
+}
+
+.gallery-image, .gallery-video {
+    width: 100%;
+    height: auto;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item:hover .gallery-image, 
+.gallery-item:hover .gallery-video {
+    transform: scale(1.05);
+}
+
+/* Lightbox Styling */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.lightbox-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 90%;
+    max-height: 80%;
+}
+
+.lightbox-image, .lightbox-video {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 10px;
+}
+
+/* Lightbox Close Button */
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 24px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.lightbox-close:hover {
+    color: #4CAF50;
+}
+
+/* Lightbox Navigation */
+.lightbox-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    color: white;
+    font-size: 30px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background 0.3s;
+}
+
+.lightbox-nav.left {
+    left: 20px;
+}
+
+.lightbox-nav.right {
+    right: 20px;
+}
+
+.lightbox-nav:hover {
+    background: rgba(255, 255, 255, 0.6);
+}
+
+/* Pagination Controls */
+.gallery-controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* Call-to-Action Buttons */
+.gallery-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-family: "Oswald", sans-serif; /* Fallback to Montserrat Semi-Bold */
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.show-more {
+    background: #4CAF50;
+    color: white;
+}
+
+.show-less {
+    background: #ff4444;
+    color: white;
+}
+
+.gallery-button:hover {
+    opacity: 0.8;
+}
+
+/* Responsive Styling */
+@media (max-width: 1024px) {
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .gallery-image, .gallery-video {
+        max-height: 200px;
+    }
+
+    .lightbox-image, .lightbox-video {
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .gallery-title {
+        font-size: 1.75rem;
+    }
+
+    .gallery-description {
+        font-size: 0.9rem;
+    }
+
+    .gallery-button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+
+    .gallery-title {
+        font-size: 1.5rem;
+    }
+
+    .gallery-description {
+        font-size: 0.85rem;
+    }
+
+    .gallery-button {
+        font-size: 0.85rem;
+        padding: 6px 12px;
+    }
+
+    .lightbox-nav {
+        font-size: 24px;
+        padding: 8px;
+    }
+
+    .lightbox-image, .lightbox-video {
+        max-width: 75%;
+    }
+}
